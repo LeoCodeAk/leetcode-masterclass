@@ -1,4 +1,4 @@
-package org.example.ArraysAndHashing.Medium;
+package org.example.ArraysAndHashing.Medium.Notes;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,6 +46,19 @@ public class HashMapExplained {
         for(Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
+
+        //getOrDefault(Object key, V defaultValue) retreive a value associated with a given key, if key is not present returns a default value
+        HashMap<String, Integer> defaultMap = new HashMap<>();
+        defaultMap.put("Apples", 10);
+        defaultMap.put("Bananas", 5);
+
+        //Key Exists
+        int apples = defaultMap.getOrDefault("Apples", 0) + 1;
+        //Key does not exist
+        int oragnes = defaultMap.getOrDefault("Oranges", 5);
+
+        System.out.println("Apples " + apples);
+        System.out.println("Oranges "+ oragnes);
 
     }
 }
